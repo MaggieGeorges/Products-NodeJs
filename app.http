@@ -1,0 +1,24 @@
+GET http://localhost:4000/product
+
+####
+
+POST  http://localhost:4000/product
+Content-Type: application/json
+
+{
+    "Name":"Laptop"
+}
+
+
+#####
+GET http://localhost:4000/product/
+
+#####
+PUT http://localhost:4000/product/
+Content-Type: application/json
+
+{
+    "name": "Updated Laptop",
+    "price": 1600.00,
+    "categoryId": "some-category-id"
+}
