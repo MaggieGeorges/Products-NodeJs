@@ -1,15 +1,14 @@
-USE Ecommerce;
+USE MyProducts;
 GO
 
 CREATE OR ALTER PROCEDURE updateProduct
-    @id VARCHAR,
+    @id VARCHAR(255),
     @name VARCHAR(255),
-    @price DECIMAL(18, 2),
-    @categoryId VARCHAR
+    @price DECIMAL(18, 2)
 AS
 BEGIN
     UPDATE products
-    SET name = @name, price = @price, categoryId=@categoryId
+    SET name = @name, price = @price
     WHERE id = @id;
 END
 GO

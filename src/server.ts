@@ -1,6 +1,6 @@
 import express,{json} from 'express'
-import productRouter from './routes/productRoutes'
-import categoryRouter from './routes/categoryRoutes'
+import productSRouter from './routes/productRoutes'
+
 
 
 
@@ -8,8 +8,7 @@ const app = express()
 
 //middlewares
 app.use(json())
-app.use("/Category", categoryRouter)
-app.use("/Product", productRouter)
+app.use("/products", productSRouter)
 
 //start
 

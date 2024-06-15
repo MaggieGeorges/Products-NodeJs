@@ -1,24 +1,36 @@
-GET http://localhost:4000/product
+GET http://localhost:4000/products/1239a155-ab0f-4f8e-ae33-6734c9dacec2
 
 ####
+GET http://localhost:4000/products?page=1&pageSize=5
 
-POST  http://localhost:4000/product
+#####
+GET http://localhost:4000/products?page=2&pageSize=5
+
+####
+POST  http://localhost:4000/products
 Content-Type: application/json
 
 {
-    "Name":"Laptop"
+    "name":"Dining Table",
+    "price": 550000.00
 }
 
-
 #####
-GET http://localhost:4000/product/
-
-#####
-PUT http://localhost:4000/product/
+PUT http://localhost:4000/products/678cd7e2-baae-43ca-b15a-d456bc54cb72
 Content-Type: application/json
 
 {
-    "name": "Updated Laptop",
+    "name": "Duvets",
     "price": 1600.00,
     "categoryId": "some-category-id"
 }
+
+####
+DELETE http://localhost:4000/products/81317ee1-2a2b-4090-a9df-b2e13f86999a
+
+
+####
+###Filtering
+GET http://localhost:4000/products/filter?minPrice=500&maxPrice=700&productName=Flask
+
+

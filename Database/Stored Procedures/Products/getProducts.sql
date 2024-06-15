@@ -1,4 +1,4 @@
-USe Ecommerce;
+USe MyProducts;
 GO
 
 CREATE OR ALTER PROCEDURE getProducts
